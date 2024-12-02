@@ -33,6 +33,8 @@ Q2: For our three models, we had generally low differences in our training versu
 
 Q3: The Lasso model fits the data well, with minimized overfitting as seen in our error metrics. However, this model is able to lose some of the complexity of the data, using a model like ElasticNet could be interesting. For Ridge, we again saw that it was pretty balanced and able to generalize without overfitting the data. I think next time we could also consider Gradient Boosting. For SVR, .Overall, to improve any potential overfitting we can use other techniques to regularize our data in the preprocessing step and minimize any residual overfitting. With regularization penalizing large coefficients, we can hope to lower any overfitting that does occur.
 
+
+### Milestone 4 Conclusion:
 Overall for this milestone, we wanted to really focus on hyperparameterization and preventing overfitting. We were able to parse through the best hyperparameters for each of the three models that we chose and regularize the data when necessary. The benefit of using Lasso and Ridge is that they have built-in regularization using the L1 and L2 regularization. For SVR
 
 
