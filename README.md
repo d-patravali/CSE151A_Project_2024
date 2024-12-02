@@ -26,7 +26,7 @@ As stated above, our first model has shown amazing results as it can clearly fit
 
 ## Milestone 4 New Work and Changes:
 
-Q1: We worked on training 3 new models for this milestone. We wanted to work on three regression models so we decided on Lasso, Ridge, and SVR. These models reduce the risk of overfitting and are robust for sparse datasets. We were able to tune our hyperparameters in order to reduce overfitting further and find models that would accurately fit both our training and testing datasets. We also worked on improving our Polynomial Regression as for Milesone 3 we had problems with overfitting. 
+Q1: We worked on training 3 new models for this milestone. We wanted to work on four regression models so we decided on Lasso, Ridge, Random Trees, and SVR. These models reduce the risk of overfitting and are robust for sparse datasets. We were able to tune our hyperparameters in order to reduce overfitting further and find models that would accurately fit both our training and testing datasets. We also worked on improving our Polynomial Regression as for Milesone 3 we had problems with overfitting. 
 
 Q2: For our three models, we had generally low differences in our training versus testing error. First for the Lasso model, when looking at the averages of our RMSEs we saw that for the training data, we had an RMSE of 0.3194 and a test RMSE of 0.6064. Considering that these are the averages they don't show many signs of overfitting as Lasso has built in regularization. Now looking at Ridge, we saw an average train RMSE of 0.2115 and an average test RMSE of 0.3599. Again Ridge has built-in regularization so the fact that there weren't signs of overfitting was a good reassurance that this model was a good selection. For SVR we had a training RMSE of , and a test RMSE of . Finally for our improved Polynomial Regression, we had a training RMSE of 0.0349 and a test RMSE of 0.1242. This was much better than our overfit Polynomial Regression model from Milestone 3. 
  
@@ -35,6 +35,6 @@ Q3: The Lasso model fits the data well, with minimized overfitting as seen in ou
 
 
 ### Milestone 4 Conclusion:
-Overall for this milestone, we wanted to really focus on hyperparameterization and preventing overfitting. We were able to parse through the best hyperparameters for each of the three models that we chose and regularize the data when necessary. The benefit of using Lasso and Ridge is that they have built-in regularization using the L1 and L2 regularization. For SVR
+Overall for this milestone, we wanted to really focus on hyperparameterization and preventing overfitting. We were able to parse through the best hyperparameters for each of the three models that we chose and regularize the data when necessary. The benefit of using Lasso and Ridge is that they have built-in regularization using the L1 and L2 regularization. When looking at Random Trees, using the tree structure with the separate samples and features per leaf node allows for us to reduce the change of overfitting and get a more robust model that can perform well on test sets. For SVR
 
 
