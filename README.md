@@ -7,11 +7,12 @@
 
 ## 🗂️ **Table of Contents**
 1. [Introduction](#introduction)
-2. [Exploratory Data Analysis](#exploratory-data-analysis)
-3. [Model Processes](#model-processes)
-4. [Results and Visualizations](#results-and-visualizations)
+2. [Exploratory Data Analysis](#-exploratory-data-analysis)
+3. [Model Processes](#-model-processes)
+4. [Results and Visualizations](#-results-and-visualizations)
 5. [Conclusion](#conclusion)
 6. [Installation and Usage](#installation-and-usage)
+
 
 
 ---
