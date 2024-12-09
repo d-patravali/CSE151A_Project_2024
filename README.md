@@ -9,7 +9,7 @@ Link To Google Colab For Milestone 2: https://colab.research.google.com/drive/1L
 Link To Google Colab For Milestone 3: https://colab.research.google.com/drive/1uKWRTpOmAjVMnLwXn6AM4jrfSNOKDguN?usp=sharing
 (Can only be accessed when using UCSD email)
 
-Link To Google Colab For Milestone 4: [Milestone 4 Notebook](https://github.com/d-patravali/CSE151A_Project_2024/blob/Milestone4/CSE_151A_Finalized_Milestone_4_FINAL.ipynb)
+Link To Google Colab For Milestone 4: [Milestone 4 Notebook](https://colab.research.google.com/drive/1F56aFpAcOWRdvnR7HLmrDu_2kiJHBAFK?usp=sharing)
 (Can only be accessed when using UCSD email)
 
 
