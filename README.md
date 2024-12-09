@@ -38,7 +38,7 @@ We took our Kaggle Dataset and boiled down the features that we thought were mos
 
 ### [Dataset](https://www.kaggle.com/datasets/luisandresgarcia/stock-market-prediction)
 
-[Back to Table of Contents](#table-of-contents)
+[Back to Table of Contents](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -69,7 +69,7 @@ We Chose Random Forest because... ‼️
 
 
 
-[Back to Table of Contents](#table-of-contents)
+[Back to Table of Contents](#%EF%B8%8F-table-of-contents)
 
 
 ## 🛠 **Model Processes**
@@ -111,7 +111,7 @@ model = RandomForest.fit(X)
 ```
 
 
-[Back to Table of Contents](#table-of-contents)
+[Back to Table of Contents](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -171,7 +171,7 @@ Here were our results for Poly Regression:
 
 
 
-[Back to Table of Contents](#table-of-contents)
+[Back to Table of Contents](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -188,7 +188,7 @@ Summarize the outcomes and deliverables achieved at the end of the project.
 - Future research could explore [specific limitations].  
 
 
-[Back to Table of Contents](#table-of-contents)
+[Back to Table of Contents](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -204,7 +204,7 @@ pip install -r requirements.txt
 
 ```
 
-[Back to Table of Contents](#table-of-contents)
+[Back to Table of Contents](#%EF%B8%8F-table-of-contents)
 
 ## **Past Write-Ups**
 
