@@ -9,6 +9,9 @@ Link To Google Colab For Milestone 2: https://colab.research.google.com/drive/1L
 Link To Google Colab For Milestone 3: https://colab.research.google.com/drive/1uKWRTpOmAjVMnLwXn6AM4jrfSNOKDguN?usp=sharing
 (Can only be accessed when using UCSD email)
 
+Link To Google Colab For Milestone 4: https://colab.research.google.com/drive/1uKWRTpOmAjVMnLwXn6AM4jrfSNOKDguN?usp=sharing
+(Can only be accessed when using UCSD email)
+
 
 ## Milestone 2 Work and Changes:
 Milestone 2 Q5: How will you preprocess your data? You should only explain (do not perform pre-processing as that is in MS3) this in your README.md file and link your Jupyter notebook to it. All code and  Jupyter notebooks have be uploaded to your repo.
