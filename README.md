@@ -1,3 +1,192 @@
+# **Stock Price Prediction Models** 
+
+![Banner Image](https://as2.ftcdn.net/v2/jpg/04/01/43/81/1000_F_401438164_xZEh1so5FIVpo3fd71xqgEPdu33dyKZm.jpg)  
+*_A journey towards profitable trades._*
+
+---
+
+## 🗂️ **Table of Contents**
+1. [Introduction](#introduction)
+2. [Installation and Usage](#installation-and-usage)
+
+
+---
+
+##  **Introduction**
+
+The stock market is a dynamic system that is influenced by a wide variety of quantitative and qualitative variables. For most investors, analyzing stock data and market trends is a tedious process, and making informed and accurate decisions is often extremely difficult to get right consistently. Our group’s goal is to create a project that considers an extremely thorough dataset of stock market data with an extensive range of features to forecast stock prices accurately and efficiently. <br>
+As students who are fascinated by the complexities of public trading and invest in the market personally, we recognize how stock market predictions have significant personal financial implications. Utilizing advanced tools like machine learning can enable better investment decisions and risk management, and at the very least serve as a comprehensive aid for stock market analysis. It can also help investors feel more confident in their investment decisions, and users can feel confident in their decision making being backed by thorough consideration of real data. <br>
+This project was fascinating because of the overlap of machine learning model development and real-world applications in finance. This project serves as a basis for a broad, yet detailed understanding of the course material while simultaneously enabling us to apply this knowledge to a valuable, real-world application for financial literacy and personal investment. While sentiment analysis and reactions to market trends may yield substantial investment results, this project is a testament to the fact that data-driven decision-making is a reliable, and more importantly consistent method of generating positive returns in the stock market.
+  
+### What We Did
+
+We took our Kaggle Dataset and boiled down the features that we thought were most useful...we built Polynomial Regression, Lasso, Ridge, and Random Trees models to predict the prices.
+- Perform Data Preprocessing and Exploration.
+- Train our models (Polynomial, Lasso, Ridge, Random Trees).
+- Vizualise our predictions, analyze metrics, and iteratively improve  
+....‼️
+###  Goals
+- Define the scope of the problem.
+- Establish key metrics for success.
+- Gather preliminary data or resources.  
+
+---
+
+## 📊 **Exploratory Data Analysis**
+
+###  Preprocessing 
+Our original dataset contains 7,781 observations and 1,285 features, with empty values and no scaling/standardization. Pre-processing is a crucial step in making our data usable and effective for the models we have built. We first cleaned our dataset by replacing missing values with column medians with a median imputer, and filtering our data for only numerical features. We also scaled those numerical features through standard and min/max scalers. Additionally, it was crucial to decide which of our extensive set of features to use for predictions, so we employed a correlation matrix, and only used features with a correlation value greater than 0.6. Finally, we employed a standard test/train split of 80:20. 
+  ‼️
+  
+### Data Exploration/Visualization
+
+### Deciding on Models
+
+#### Model 1: Polynomial Regression
+We Chose Polynomial Regression because... ‼️
+
+
+#### Model 2: Lasso and Ridge (L1, L2)
+We Chose Lasso and Ridge because... ‼️
+
+
+#### Model 3: Support Vector Regression
+We Chose Support Vector Regression because... ‼️
+
+
+#### Model 4: Random Forest Regression
+We Chose Random Forest because... ‼️
+
+
+## 🛠 **Model Explanation**
+
+#### Model 1: Polynomial Regression
+Our first model was polynomial regression, for which we tested several different polynomial degrees. For polynomial regression, we generated models for several different polynomial degrees, starting with linear regression, and going up until a degree of 5. For each degree, we performed polynomial feature expansion to prepare our data, and generated MSE and R^2 values to evaluate performance and overfitting/underfitting analysis. 
+
+```
+model = PolynomialRegression.fit(X)
+...‼️
+```
+
+
+#### Model 2: Lasso and Ridge (L1, L2)
+Our second model was built upon the fact that we recognized overfitting in our polynomial regression models. We used Ridge and Lasso regression as regularized linear regression models to mitigate overfitting in our linear model. For these models, hyperparameter tuning was important to determine what regularization strengths would be most effective in mitigating overfitting without compromising performance. We tested alpha (regularization strength) values of 0.01, 0.08, 0.1, 0.15, 0.2, 0.3, 0.4, 1, 10, and 100 to determine optimal results. <br>
+lasso_alphas = [0.01, 0.08, 0.1, 0.15, 0.2, 0.3, 0.4, 1, 10, 100]<br>
+ridge_alphas = [0.01, 0.08, 0.1, 0.15, 0.2, 0.3, 0.4, 1, 10, 100]
+
+```
+model = Lasso
+model1 = Ridge
+...‼️
+```
+
+
+#### Model 3: Support Vector Regression
+The third model we built was Support Vector Regression, which uses support vectors to predict continuous stock price values while minimizing errors within a specified tolerance. This model was used given the high dimensionality of our data set, which SVR works well for. For this model, the most critical step was hyperparameter tuning. We had to test our model on different kernel, C, epsilon, and gamma settings/values. We tested 72 different hyperparameter combinations and found that the most optimal hyperparameter combinations were (linear, 0.1, 0.01, and auto) and (linear, 0.1, 0.01, and scale) respectively. 
+
+```
+model = SVR.fit(X)
+...‼️
+```
+
+#### Model 4: Random Forest Regression
+The fourth and final model that we utilized was Random Forest Trees, which splits our data into regions based on feature thresholds. We employed random forest regression to capture the more complex, non-linear patterns in our stock market data. 
+```
+model = RandomForest.fit(X)
+...‼️
+```
+
+---
+
+## 📊 **Results and Visualizations**
+
+
+#### Model 1: Polynomial Regression
+Here were our results for Poly Regression:
+- Training RMSE: 
+- Test RMSE:
+- Training R²: 0.9932320517075023
+- Test R²: 0.9808777373054388
+- Cross-Validation R² Scores: [-2.78935438, 0.28107945, 0.84705524, -0.49929551, -0.19701962]
+- Mean Cross-Validation R²: -0.4715069631131919
+
+
+... and here is the graph of our other error metrics... ‼️
+
+
+#### Model 2: Lasso and Ridge (L1, L2)
+Here were our results for Poly Regression:
+- Training RMSE: 
+- Test RMSE:
+- Training R²: 0.9932320517075023
+- Test R²: 0.9808777373054388
+- Cross-Validation R² Scores: [-2.78935438, 0.28107945, 0.84705524, -0.49929551, -0.19701962]
+- Mean Cross-Validation R²: -0.4715069631131919
+
+
+... and here is the graph of our other error metrics... ‼️
+
+
+#### Model 3: Support Vector Regression
+Here were our results for Poly Regression:
+- Training RMSE: 
+- Test RMSE:
+- Training R²: 0.9932320517075023
+- Test R²: 0.9808777373054388
+- Cross-Validation R² Scores: [-2.78935438, 0.28107945, 0.84705524, -0.49929551, -0.19701962]
+- Mean Cross-Validation R²: -0.4715069631131919
+
+
+... and here is the graph of our other error metrics... ‼️
+
+
+#### Model 4: Random Forest Regression
+Here were our results for Poly Regression:
+- Training RMSE: 
+- Test RMSE:
+- Training R²: 0.9932320517075023
+- Test R²: 0.9808777373054388
+- Cross-Validation R² Scores: [-2.78935438, 0.28107945, 0.84705524, -0.49929551, -0.19701962]
+- Mean Cross-Validation R²: -0.4715069631131919
+
+
+... and here is the graph of our other error metrics... ‼️
+
+
+---
+
+##  **Conclusion**
+
+###  Description  
+Summarize the outcomes and deliverables achieved at the end of the project.  
+
+### Final Outputs
+ 
+
+###  Key Takeaways
+- The proposed methodology demonstrates [specific success].  
+- Future research could explore [specific limitations].  
+
+---
+
+##  **Installation and Usage**
+
+```bash
+# Clone the repository
+git clone https://github.com/d-patravali/CSE151A_Project_2024.git
+
+
+# Install dependencies
+pip install -r requirements.txt
+
+```
+
+## **Past Write-Ups**
+
+
+
+
+
 # CSE151A_Project_2024
 Stock Market Prediction Model for CSE 151A Fall 2024
 
