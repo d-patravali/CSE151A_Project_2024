@@ -7,7 +7,11 @@
 
 ## 🗂️ **Table of Contents**
 1. [Introduction](#introduction)
-2. [Installation and Usage](#installation-and-usage)
+2. [Exploratory Data Analysis](#exploratory-data-analysis)
+3. [Model Processes](#model-processes)
+4. [Results and Visualizations](#results-and-visualizations)
+5. [Conclusion](#conclusion)
+6. [Installation and Usage](#installation-and-usage)
 
 
 ---
@@ -29,6 +33,11 @@ We took our Kaggle Dataset and boiled down the features that we thought were mos
 - Define the scope of the problem.
 - Establish key metrics for success.
 - Gather preliminary data or resources.  
+- 
+
+### [Dataset](https://www.kaggle.com/datasets/luisandresgarcia/stock-market-prediction)
+
+[Back to Table of Contents](#table-of-contents)
 
 ---
 
@@ -58,7 +67,11 @@ We Chose Support Vector Regression because... ‼️
 We Chose Random Forest because... ‼️
 
 
-## 🛠 **Model Explanation**
+
+[Back to Table of Contents](#table-of-contents)
+
+
+## 🛠 **Model Processes**
 
 #### Model 1: Polynomial Regression
 Our first model was polynomial regression, for which we tested several different polynomial degrees. For polynomial regression, we generated models for several different polynomial degrees, starting with linear regression, and going up until a degree of 5. For each degree, we performed polynomial feature expansion to prepare our data, and generated MSE and R^2 values to evaluate performance and overfitting/underfitting analysis. 
@@ -95,6 +108,9 @@ The fourth and final model that we utilized was Random Forest Trees, which split
 model = RandomForest.fit(X)
 ...‼️
 ```
+
+
+[Back to Table of Contents](#table-of-contents)
 
 ---
 
@@ -153,6 +169,9 @@ Here were our results for Poly Regression:
 ... and here is the graph of our other error metrics... ‼️
 
 
+
+[Back to Table of Contents](#table-of-contents)
+
 ---
 
 ##  **Conclusion**
@@ -166,6 +185,9 @@ Summarize the outcomes and deliverables achieved at the end of the project.
 ###  Key Takeaways
 - The proposed methodology demonstrates [specific success].  
 - Future research could explore [specific limitations].  
+
+
+[Back to Table of Contents](#table-of-contents)
 
 ---
 
@@ -181,9 +203,9 @@ pip install -r requirements.txt
 
 ```
 
+[Back to Table of Contents](#table-of-contents)
+
 ## **Past Write-Ups**
-
-
 
 
 
