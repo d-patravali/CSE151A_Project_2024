@@ -14,7 +14,6 @@
 6. [Installation and Usage](#installation-and-usage)
 
 
-
 ---
 
 ##  **Introduction**
@@ -38,11 +37,11 @@ We took our Kaggle Dataset and boiled down the features that we thought were mos
 
 ### [Dataset](https://www.kaggle.com/datasets/luisandresgarcia/stock-market-prediction)
 
-[Back to Table of Contents](#%EF%B8%8F-table-of-contents)
+[Back to Table of Contents](#table-of-contents)
 
 ---
 
-## 📊 **Exploratory Data Analysis**
+## 📊  **Exploratory Data Analysis**
 
 ###  Preprocessing 
 Our original dataset contains 7,781 observations and 1,285 features, with empty values and no scaling/standardization. Pre-processing is a crucial step in making our data usable and effective for the models we have built. We first cleaned our dataset by replacing missing values with column medians with a median imputer, and filtering our data for only numerical features. We also scaled those numerical features through standard and min/max scalers. Additionally, it was crucial to decide which of our extensive set of features to use for predictions, so we employed a correlation matrix, and only used features with a correlation value greater than 0.6. Finally, we employed a standard test/train split of 80:20. 
@@ -53,23 +52,21 @@ Our original dataset contains 7,781 observations and 1,285 features, with empty 
 ### Deciding on Models
 
 #### Model 1: Polynomial Regression
-We Chose Polynomial Regression because... ‼️
+We chose Polynomial Regression because the goal of the model is to fit a curve of the data. The advantage of this is that it can find non-linear relationships among the data, and this is very common among stock market trends. 
 
 
 #### Model 2: Lasso and Ridge (L1, L2)
-We Chose Lasso and Ridge because... ‼️
+We chose Lasso Regression because after seeing that Polynomial did alright, we wanted to try and shrink some of the metrics and focus on the ones that are most relevant to good predictions in price. In terms of Ridge we wanted to make sure that we didn't overfit and so we had our Ridge Regression model to lower the high coefficients because lots of our features were highly correlated with price and each other. We didn't want that to effect our chances of overfitting.
 
 
 #### Model 3: Support Vector Regression
-We Chose Support Vector Regression because... ‼️
-
-
-#### Model 4: Random Forest Regression
-We Chose Random Forest because... ‼️
+We chose Support Vector Regression because we had a lot of features that we were using to predict stock prices. SVR is very robust and efficient when it comes to datasets with lots of features, this meant that it would work well with our noisy and convoluted stock market data.
 
 
 
-[Back to Table of Contents](#%EF%B8%8F-table-of-contents)
+
+
+[Back to Table of Contents](#table-of-contents)
 
 
 ## 🛠 **Model Processes**
@@ -103,15 +100,8 @@ model = SVR.fit(X)
 ...‼️
 ```
 
-#### Model 4: Random Forest Regression
-The fourth and final model that we utilized was Random Forest Trees, which splits our data into regions based on feature thresholds. We employed random forest regression to capture the more complex, non-linear patterns in our stock market data. 
-```
-model = RandomForest.fit(X)
-...‼️
-```
 
-
-[Back to Table of Contents](#%EF%B8%8F-table-of-contents)
+[Back to Table of Contents](#table-of-contents)
 
 ---
 
@@ -120,12 +110,17 @@ model = RandomForest.fit(X)
 
 #### Model 1: Polynomial Regression
 Here were our results for Poly Regression:
-- Training RMSE: 
+- Training RMSE: 0.7020
 - Test RMSE:
 - Training R²: 0.9932320517075023
 - Test R²: 0.9808777373054388
 - Cross-Validation R² Scores: [-2.78935438, 0.28107945, 0.84705524, -0.49929551, -0.19701962]
 - Mean Cross-Validation R²: -0.4715069631131919
+- 
+Train RMSE: 0.7020
+  Train MAE: 0.5329
+  Train Max Error: 2.5795
+  Train Median Absolute Error: 0.4306
 
 
 ... and here is the graph of our other error metrics... ‼️
@@ -157,21 +152,11 @@ Here were our results for Poly Regression:
 ... and here is the graph of our other error metrics... ‼️
 
 
-#### Model 4: Random Forest Regression
-Here were our results for Poly Regression:
-- Training RMSE: 
-- Test RMSE:
-- Training R²: 0.9932320517075023
-- Test R²: 0.9808777373054388
-- Cross-Validation R² Scores: [-2.78935438, 0.28107945, 0.84705524, -0.49929551, -0.19701962]
-- Mean Cross-Validation R²: -0.4715069631131919
-
-
-... and here is the graph of our other error metrics... ‼️
 
 
 
-[Back to Table of Contents](#%EF%B8%8F-table-of-contents)
+
+[Back to Table of Contents](#table-of-contents)
 
 ---
 
@@ -184,11 +169,17 @@ Summarize the outcomes and deliverables achieved at the end of the project.
  
 
 ###  Key Takeaways
-- The proposed methodology demonstrates [specific success].  
-- Future research could explore [specific limitations].  
 
 
-[Back to Table of Contents](#%EF%B8%8F-table-of-contents)
+Overall, when working on this predictive task of predicting the stock market prices based on the features we chose, we knew that it was going to be a challenging problem. I mean it is knownw that predicting if markets will go up or down is one of the most lucrative programming tasks in the field, but we were willing to take our crack at it. With our models, and iterating in the process we were able to find results that satisfied our wants. 
+
+The SVR model turned out to be the best in terms of predicting the test set as closely as possible. The Lasso and Ridge performed okay and the Polynomail Regreesion with degree 1 was also and okay performer for us. We learned that what you initially think might be best can always be hyperparameter tuned or even traded out for another model. We found that Random Forest was something we wanted to try for Milestone 4, however, after looking at its output, for the final project we decided to move away from it. 
+
+In terms of future things that could be improved for this project is using only the metrics that you can use from the current price and try and predict the next price. This type of model would be effective and more practical because it could 
+
+
+
+[Back to Table of Contents](#table-of-contents)
 
 ---
 
@@ -204,10 +195,9 @@ pip install -r requirements.txt
 
 ```
 
-[Back to Table of Contents](#%EF%B8%8F-table-of-contents)
+[Back to Table of Contents](#table-of-contents)
 
 ## **Past Write-Ups**
-
 
 
 # CSE151A_Project_2024
