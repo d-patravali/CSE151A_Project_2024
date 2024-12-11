@@ -38,7 +38,7 @@ We took our Kaggle Dataset and boiled down the features that we thought were mos
 
 ### [Dataset](https://www.kaggle.com/datasets/luisandresgarcia/stock-market-prediction)
 
-[Back to Table of Contents](#table-of-contents)
+[Back to Table of Contents](#%EF%B8%8F-table-of-contents)
 
 ---
 
