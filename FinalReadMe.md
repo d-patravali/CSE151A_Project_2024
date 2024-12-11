@@ -6,22 +6,22 @@
 ---
 
 ## 🗂️ **Table of Contents**
-1. [Introduction](#Introduction:)
-2. [Methods Section](#Methods-Section:)
-3. [Results Section](#Results-Section:)
-4. [Discussion Section](#Discussion-Section:)
-5. [Conclusion](#Conclusion:)
+1. [Introduction](#Introduction)
+2. [Methods Section](#Methods-Section)
+3. [Results Section](#Results-Section)
+4. [Discussion Section](#Discussion-Section)
+5. [Conclusion](#Conclusion)
 6. [Statement of Collaboration](#Statement-of-Collaboration)
 
 
-##  **Introduction:**
+##  **Introduction**
 The stock market is a dynamic system that is influenced by a wide variety of quantitative and qualitative variables. For most investors, analyzing stock data and market trends is a tedious process, and making informed and accurate decisions is often extremely difficult to get right consistently. Our group’s goal is to create a project that considers an extremely thorough dataset of stock market data with an extensive range of features to forecast stock prices accurately and efficiently. 
 
 As students who are fascinated by the complexities of public trading and invest in the market personally, we recognize how stock market predictions have significant personal financial implications. Utilizing advanced tools like machine learning can enable better investment decisions and risk management, and at the very least serve as a comprehensive aid for stock market analysis. It can also help investors feel more confident in their investment decisions, and users can feel confident in their decision making being backed by thorough consideration of real data. 
 
 This project was fascinating because of the overlap of machine learning model development and real-world applications in finance. This project serves as a basis for a broad, yet detailed understanding of the course material while simultaneously enabling us to apply this knowledge to a valuable, real-world application for financial literacy and personal investment. While sentiment analysis and reactions to market trends may yield substantial investment results, this project is a testament to the fact that data-driven decision-making is a reliable, and more importantly, consistent method of generating positive returns in the stock market. 
 
-##  **Methods Section:**
+##  **Methods Section**
 
 ### Data Exploration
 
@@ -40,10 +40,10 @@ Our second model was built upon the fact that we recognized overfitting in our p
 ### Model 3: **Support Vector Regression (SVR)**
 The third model we built was Support Vector Regression, which uses support vectors to predict continuous stock price values while minimizing errors within a specified tolerance. This model was used given the high dimensionality of our data set, which SVR works well for. For this model, the most critical step was hyperparameter tuning. We had to test our model on different **kernel**, **C**, **epsilon**, and **gamma** settings/values. We tested 72 different hyperparameter combinations and found that the most optimal hyperparameter combinations were (linear, 0.1, 0.01, and auto) and (linear, 0.1, 0.01, and scale) respectively. 
 
-##  **Results Section:**
+##  **Results Section**
 
-##  **Discussion Section:**
+##  **Discussion Section**
 
-##  **Conclusion:**
+##  **Conclusion**
 
-##  **Statement of Collaboration:**
+##  **Statement of Collaboration**
