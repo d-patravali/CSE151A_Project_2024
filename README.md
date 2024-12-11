@@ -7,11 +7,12 @@
 
 ## 🗂️ **Table of Contents**
 1. [Introduction](#introduction)
-2. [Exploratory Data Analysis](#-exploratory-data-analysis)
+2. [Exploratory Data Analysis](#--exploratory-data-analysis)
 3. [Model Processes](#-model-processes)
 4. [Results and Visualizations](#-results-and-visualizations)
 5. [Conclusion](#conclusion)
 6. [Installation and Usage](#installation-and-usage)
+
 
 
 ---
@@ -66,7 +67,7 @@ We chose Support Vector Regression because we had a lot of features that we were
 
 
 
-[Back to Table of Contents](#table-of-contents)
+[Back to Table of Contents](#%EF%B8%8F-table-of-contents)
 
 
 ## 🛠 **Model Processes**
@@ -101,7 +102,7 @@ model = SVR.fit(X)
 ```
 
 
-[Back to Table of Contents](#table-of-contents)
+[Back to Table of Contents](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -156,7 +157,7 @@ Here were our results for Poly Regression:
 
 
 
-[Back to Table of Contents](#table-of-contents)
+[Back to Table of Contents](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -179,7 +180,7 @@ In terms of future things that could be improved for this project is using only 
 
 
 
-[Back to Table of Contents](#table-of-contents)
+[Back to Table of Contents](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -195,7 +196,7 @@ pip install -r requirements.txt
 
 ```
 
-[Back to Table of Contents](#table-of-contents)
+[Back to Table of Contents](#%EF%B8%8F-table-of-contents)
 
 ## **Past Write-Ups**
 
