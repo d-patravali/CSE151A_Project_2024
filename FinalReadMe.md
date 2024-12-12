@@ -69,7 +69,7 @@ The third model we built was Support Vector Regression, which uses support vecto
 <img height="500" alt="SVR Hyper Perameter Sheet" src="https://github.com/user-attachments/assets/fd529b18-9939-464d-806b-6ee1fff13bda" />
 
 ##  **Results Section**
- DHRUV ADD ONE STOCK GRAPH FOR EACH MODEL IN RESULT 
+ DHRUV ADD ONE STOCK GRAPH FOR EACH MODEL IN RESULT, ALWAYS USE ASML 
 ##  **Discussion Section**
 
 **Data Exploration Discussion**
@@ -149,6 +149,9 @@ df[min_max] = minMaxScaler.fit_transform(df[min_max])
 
 In milestone 3, we decided that our first model should be a form of regression. Since linear regression felt like it was too simple to capture the complexity of our dataset and project, we decided to go with polynomial regression of degree 2. After all pre-processing etc, we looped through every ticker/stock in our company, trained and tested the models, and printed the fitting graphs and evaluation metrics for all tickers afterwards. Upon reviewing the metrics, we realized that we had severe overfitting in terms of several magnitudes. For example, when we trained our model on the ASML ticker, our train RMSE was 0.152 and our test RMSE was 4.411. Realizing our issue, we decided on a different approach in Milestone 4 and decided to employ both hyper parameter tuning and regularization to combat the overfitting. For hyper parameter tuning, we used degree 1, 2, 3, 4, and 5 for polynomial regression and used polynomial feature expansion for each degree in order to find the best parameter and observe how the performance of our models changes depending on the degree. After printing and visualizing the performance metrics, we noticed that a clear trend where higher degree parameters exhibited significantly more overfitting. For example, our evaluation results for the ticker ASML gave us a jump from a test RMSE of 0.7 and train RMSE of 2.5 for degree 1 to a train RMSE of 0.2 to 5.8 which was an enormous jump in magnitude for overfitting and continued to increase as the degree increased. We reasoned that this was caused by the fact that using a higher degree allowed the model to become excessively complex and enable it to fit the training data too well which included noise and random fluctuations which was counterintuitive to our initial expectation that a simple linear regression model would be too simple to capture the complexities. In the end, we decided that the best degree would be of degree 1, or linear regression and although it had the best results out of every parameter we tried, it still showed a significant sign of overfitting. Therefore, we decided to pursue more tuning through Lasso and Ridge regularizations for our second models to hopefully reduce overfitting.
 
+*Polynomial regression fit on the stock 'ASML'*
+<img width="550" alt="image" src="https://github.com/user-attachments/assets/f604752b-6655-4fee-860c-04dc06687192" />
+
 **Model 2 - Ridge And Lasso Regression L1/L2 Discussion**
 
 The second model(s) we used was Lasso and Ridge Regression, which we grouped together due to their inherent similarity. After our first model, polynomial regression, we observed that the best degree of polynomial was 1, meaning that linear regression was the most successful in giving accurate predictions with the least overfitting (compared to that of other polynomial models). However, it was evident that the model still struggled with overfitting. As a result, we decided to try Lasso and Ridge regression, as the regularization techniques within these models could help to mitigate overfitting by adding a penalty to the loss function. These regularization techniques are catered towards better generalization and discourage the inclusion of disproportionately heavy weights and capturing overly complex relationships.
@@ -156,6 +159,9 @@ The second model(s) we used was Lasso and Ridge Regression, which we grouped tog
 The hyperparameter tuning in this step was testing which alpha (regularization strength) values would yield the best results, checking for prediction accuracy and overfitting. We tested a substantial range of regularization strengths for both models, testing values of 0.01, 0.08, 0.1, 0.15, 0.2, 0.3, 0.4, 1, 10, and 100, to ensure that we have a comprehensive range of regularization strengths to test our data on. As expected, with Lasso Regression, we saw a decrease in accuracy, but a corresponding decrease in overfitting (based on significantly lower difference in train and test RMSE) as we increased the regularization strength, results. However, the hyperparameter tuning for Ridge regression did not seem to be as effective in mitigating the overfitting. This is likely due to the fact that overfitting could be more attributed to feature selection rather than model complexity, as Lasso Regression can essentially sink weights down to 0, essentially performing feature selection. This showed us that based on our goals for Lasso and Ridge Regression, Lasso was better suited for our model as it helped us understand where our overfitting was coming from and address it in a targeted manner. 
 
 However, as we increased the regularization strength, we observed that our RMSE was increasing noticeably for both Train and Test data. This showed us that there is a balance aspect to using Lasso Regression, where we need to find out how much error can we induce in order to reduce overfitting before our model becomes too inaccurate with its prediction capabilities. 
+
+*Lasso and Ridge RMSEs Over Alpha*
+<img width="462" alt="image" src="https://github.com/user-attachments/assets/5b3c11f1-f286-479c-a551-8b70d784265e" />
 
 
 **Model 3 - Support Vector Regression (SVR) Discussion** 
