@@ -21,6 +21,8 @@ As students who are fascinated by the complexities of public trading and invest 
 
 This project was fascinating because of the overlap of machine learning model development and real-world applications in finance. This project serves as a basis for a broad, yet detailed understanding of the course material while simultaneously enabling us to apply this knowledge to a valuable, real-world application for financial literacy and personal investment. While sentiment analysis and reactions to market trends may yield substantial investment results, this project is a testament to the fact that data-driven decision-making is a reliable, and more importantly, consistent method of generating positive returns in the stock market. 
 
+[Back to Table of Contents](#%EF%B8%8F-table-of-contents)
+
 ##  **Methods Section**
 
 #### Data Exploration
@@ -68,6 +70,9 @@ The third model and final model we built was Support Vector Regression, which us
 *CSV file created to analyze hyper parameter combinations and outputs*
 <img height="500" alt="SVR Hyper Perameter Sheet" src="https://github.com/user-attachments/assets/fd529b18-9939-464d-806b-6ee1fff13bda" />
 
+
+[Back to Table of Contents](#%EF%B8%8F-table-of-contents)
+
 ##  **Results Section**
  DHRUV ADD ONE STOCK GRAPH FOR EACH MODEL IN RESULT, ALWAYS USE ASML 
  Also the graphs u use in this section remove from hte bottom but leave th other two
@@ -103,6 +108,9 @@ To understand the importance of the features that we would later take into consi
 </div>
 
 In regards to feature selection, the main factor we took into consideration when looking for features to retain was their correlation to our target feature ‘close’, which represents the closing price of a certain stock. Correlation analysis would help us identify features with a strong linear relationship to our target variable which is represented with a high absolute correlation indicating that the feature can be a strong predictor to be included in our regression models. To do so, we plotted a correlation heat map for every single feature for a visual representation of the relationships among all features and a corresponding correlation matrix that provides exact correlation values that we used in future reference in processing to determine highly correlated features(red/blue on heatmap or close to values -1 or 1) related to our target that we wanted to keep and identify features with low correlation(white on heatmap or close to value 0). Finally, our pairplots between all features allowed us to analyze all of the metrics above by providing another form of visualization to analyze trends, correlation, and outliers while also providing visual insight on the relationships between different features for both deciding which features will contribute to the accuracy of our model while simultaneously informing us of possible transformations we need to impose onto the data. 
+
+
+[Back to Table of Contents](#%EF%B8%8F-table-of-contents)
 
 **Pre-Processing Discussion**
 
@@ -147,6 +155,7 @@ df[standard] = stdScaler.fit_transform(df[standard])
 df[min_max] = minMaxScaler.fit_transform(df[min_max])
 ```
 
+
 **Model 1 - Polynomial Regression Discussion**
 
 In milestone 3, we decided that our first model should be a form of regression. Since linear regression felt like it was too simple to capture the complexity of our dataset and project, we decided to go with polynomial regression of degree 2. After all pre-processing etc, we looped through every ticker/stock in our company, trained and tested the models, and printed the fitting graphs and evaluation metrics for all tickers afterwards. Upon reviewing the metrics, we realized that we had severe overfitting in terms of several magnitudes. For example, when we trained our model on the ASML ticker, our train RMSE was 0.152 and our test RMSE was 4.411. Realizing our issue, we decided on a different approach in Milestone 4 and decided to employ both hyper parameter tuning and regularization to combat the overfitting. For hyper parameter tuning, we used degree 1, 2, 3, 4, and 5 for polynomial regression and used polynomial feature expansion for each degree in order to find the best parameter and observe how the performance of our models changes depending on the degree. After printing and visualizing the performance metrics, we noticed that a clear trend where higher degree parameters exhibited significantly more overfitting. For example, our evaluation results for the ticker ASML gave us a jump from a test RMSE of 0.7 and train RMSE of 2.5 for degree 1 to a train RMSE of 0.2 to 5.8 which was an enormous jump in magnitude for overfitting and continued to increase as the degree increased. We reasoned that this was caused by the fact that using a higher degree allowed the model to become excessively complex and enable it to fit the training data too well which included noise and random fluctuations which was counterintuitive to our initial expectation that a simple linear regression model would be too simple to capture the complexities. In the end, we decided that the best degree would be of degree 1, or linear regression and although it had the best results out of every parameter we tried, it still showed a significant sign of overfitting. Therefore, we decided to pursue more tuning through Lasso and Ridge regularizations for our second models to hopefully reduce overfitting.
@@ -178,10 +187,14 @@ Our third and final model was Support Vector Regression (SVR), which was certain
 Based on this rationale, it was clear that the key to success with SVR would be thorough hyperparameter tuning, as there are four hyperparameters to be “played” with for SVR, giving us a wide range of combinations to try. We set up our model using for loops to test performance on 72 total combinations of hyperparameters, for which we saw extremely varying results. Many combinations gave negative R^2 values and/or extremely high RMSE values, showing extremely poor performance, however, some combinations showed much better results than our first or second models. To reiterate what we covered in our results section, we found an optimal hyperparameter combination of Kernel: linear, C: 1.0, Epsilon: 0.01, and Gamma: Auto or Scale. As explained in results, these hyperparameters gave us incredibly accurate results, and negligible overfitting, with a difference in Train and Test RMSE being only just over 11%. 
 
 
+[Back to Table of Contents](#%EF%B8%8F-table-of-contents)
+
 ##  **Conclusion**
 
 In regards to future possible directions, we all collectively agreed that the best model for this project would have been a Long Short Term Model, a type of neural network that can be used to learn and predict sequential data. By the end of the project it was clear the main issues we were dealing with was the sequential nature of the time series and overfitting, which an LSTM or other neural networks could’ve handled better. As explained above, time series and time steps was one issue that baffled us for a while since our project aimed to predict future close prices based on past ones and that heavily relied on how we dealt with the ‘date’ feature we overlooked for a while. The main issue in our project was struggling with overfitting which we initially thought was due to our models but ended up being a problem with the nature of our dataset. After research, we realized that the volatility in stock market data will always lead to some degree of overfitting in any regression, whether it be polynomial, linear, or L1/L2 regression. This is due to the fact that the closing price or ‘close’ feature in real stock markets are severely impacted by outside events and news, like new laws etc, which are qualitative factors that we simple regression models can’t predict or handle. For example, linear regression aims to find a simple pattern or trend in the data to predict future values but our data will only indicate that there seems to be a trend or pattern when in reality, there isn’t. Thus, the use of LSTM neural networks would be the best choice for a model in regards to this project due to its ability to properly handle temporal dependencies through time based cycles, trends, and patterns that go beyond the simplistic nature of regression and its ability to model non-linear and complex relationships that take into account multiple qualitative factors that regression can’t handle such as sentiment, events, geopolitical changes, and etc. 
 
+
+[Back to Table of Contents](#%EF%B8%8F-table-of-contents)
 
 ##  **Statement of Collaboration**
 
