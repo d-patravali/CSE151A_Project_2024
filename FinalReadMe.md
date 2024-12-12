@@ -205,24 +205,21 @@ Polynomial Regression:
 
 
 Lasso:
+ASML
+![Screenshot 2024-12-11 at 10 23 36 PM](https://github.com/user-attachments/assets/18c52f66-8ac1-4426-ac8f-474dded578c6)
 
-![Screenshot 2024-12-11 at 8 21 15 PM](https://github.com/user-attachments/assets/f97cb37f-6508-4c6a-9bba-37575fe21e3b)
+![Screenshot 2024-12-11 at 10 24 03 PM](https://github.com/user-attachments/assets/e863c948-dee8-48d5-b12b-980aec024b7b)
 
-![Screenshot 2024-12-11 at 8 21 34 PM](https://github.com/user-attachments/assets/83b63617-0a17-4ead-bbae-6784ccbe5731)
-
-![Screenshot 2024-12-11 at 8 21 59 PM](https://github.com/user-attachments/assets/88e2eb66-e0af-41ea-95ed-873797b2ffb9)
-
+![Screenshot 2024-12-11 at 10 24 32 PM](https://github.com/user-attachments/assets/046cfb49-a49f-46c1-a826-747528a307c5)
 
 
 Ridge:
+ASML
+![Screenshot 2024-12-11 at 10 23 46 PM](https://github.com/user-attachments/assets/ad53c138-d3ac-43d0-a203-3ba24b6b5569)
 
-![Screenshot 2024-12-11 at 8 21 24 PM](https://github.com/user-attachments/assets/7fdd039f-850d-42ff-bb75-8d5921744091)
+![Screenshot 2024-12-11 at 10 24 21 PM](https://github.com/user-attachments/assets/66f8a990-50ff-45e3-a303-dee39cc35fa4)
 
-![Screenshot 2024-12-11 at 8 21 45 PM](https://github.com/user-attachments/assets/f04b07ff-00d4-4e00-90c0-1174d94f32d3)
-
-![Screenshot 2024-12-11 at 8 22 16 PM](https://github.com/user-attachments/assets/95583b82-55f0-4b2a-a187-1de556f5a9f1)
-
-
+![Screenshot 2024-12-11 at 10 24 42 PM](https://github.com/user-attachments/assets/ae98139d-e66c-45bc-b1b6-65696054bea6)
 
 
 
