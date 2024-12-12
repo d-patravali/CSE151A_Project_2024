@@ -234,7 +234,8 @@ Some Exploratory Data Analysis Images:
 
 
 
-### *Extra Snippets*
+### *Extra Figures and Graphs to use for extra reference*
+
 Polynomial Regression:
 
 ![Screenshot 2024-12-11 at 8 20 20 PM](https://github.com/user-attachments/assets/b52cb0e6-117b-4e15-917b-8fbe5314e861)
