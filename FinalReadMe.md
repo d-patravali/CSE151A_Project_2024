@@ -122,6 +122,12 @@ For our training and testing, we decided to go with the standard 80:20 train-tes
 *Handling missing data with simple median inputer*
 
 Due to our approach in feature selection, we retained features that had missing data that we had to take into account. To handle this, we decided to look at our pair plots and other figures generated in our data exploration step in order to figure out how to handle them. As displayed above, the pairplots and other figures demonstrated that almost all our features had significant skewness, outliers, and long tailed distributions so instead of taking the mean which could introduce bias, we decided to take the median to make it much less susceptible to outliers. By doing so, we introduced a simple median inputer to handle missing data to stabilize the dataset and make sure that it doesn’t skew or distort any of our predictions. 
+```
+# Handle missing data
+median_imputer = SimpleImputer(strategy='median')
+num_cols = df.select_dtypes(include=['float64', 'int64']).columns
+df[num_cols] = median_imputer.fit_transform(df[num_cols])
+```
 
 *Feature scaling with Standard and MinMax Scaler*
 
