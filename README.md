@@ -56,6 +56,7 @@ Index(['date', 'open', 'high', 'low', 'close', 'adjclose', 'volume', 'ticker',
 </div>
 
 
+<img width="1435" alt="Screenshot 2024-12-11 at 11 58 59 PM" src="https://github.com/user-attachments/assets/25a62234-6d52-4dd6-aa12-71beda06ee47" />
 
 
 #### Preprocessing
