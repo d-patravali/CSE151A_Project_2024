@@ -102,6 +102,16 @@ In milestone 3, we decided that our first model should be a form of regression. 
 ##  **Statement of Collaboration**
 
 
+Some Exploratory Data Analysis Images:
+
+![Screenshot 2024-12-11 at 8 36 51 PM](https://github.com/user-attachments/assets/b3518958-109b-48af-a556-9677208ab6dd)
+
+![Screenshot 2024-12-11 at 8 37 01 PM](https://github.com/user-attachments/assets/909eaad8-057a-4013-9b6a-7711ba039f77)
+
+![Screenshot 2024-12-11 at 8 37 14 PM](https://github.com/user-attachments/assets/0d0ceddb-b899-4f0e-b90a-29a0e1a5ac83)
+
+
+
 Polynomial Regression:
 ![Screenshot 2024-12-11 at 8 20 20 PM](https://github.com/user-attachments/assets/b52cb0e6-117b-4e15-917b-8fbe5314e861)
 
