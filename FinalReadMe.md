@@ -32,7 +32,7 @@ Our original dataset contains **7,781 observations** and **1,285 features**, wit
 #### Model 1: **Polynomial Regression**
 Our first model was polynomial regression, for which we tested several different polynomial degrees. For polynomial regression, we generated models for several different polynomial degrees, starting with linear regression, and going up until a degree of 5. For each degree, we performed polynomial feature expansion to prepare our data, and generated MSE and R^2 values to evaluate performance and overfitting/underfitting analysis. 
 ```
-# Store evaluation results
+# Store select evaluation results for display
         model_name = f'Polynomial Degree {degree}'
         if ticker not in evaluation_results:
             evaluation_results[ticker] = {}
