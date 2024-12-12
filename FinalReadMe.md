@@ -135,6 +135,15 @@ df[num_cols] = median_imputer.fit_transform(df[num_cols])
 *Feature scaling with Standard and MinMax Scaler*
 
 Using similar reasoning, the distribution of our features enabled us to employ feature scaling with Standard and MinMax scalers where we again looked at our data exploration figures to figure out whether to employ Standard or MinMax Scalers to stabilize our data. Looking through our features in data exploration, features such as ‘open’, ‘atr5’, ‘atr10’, etc displayed signs of Gaussian-like distributions so normalizing the features with a standard scaler allowed them to have a mean of 0 and std of 1. For the remaining features we employed a MinMax scaler to ensure that they were scaled to a range of between 0 and 1 inclusive due to the volatile ranges of stock data.
+```
+# Feature Scaling
+# Define the features to be scaled
+standard = ['open', 'vwapadjclosevolume', 'atr5', 'atr10', 'atr15', 'atr20']
+min_max = ['open', 'high', 'low', 'low-5', 'high-5', 'low-10', 'high-10', 'low-15', 'high-15']
+...
+df[standard] = stdScaler.fit_transform(df[standard])
+df[min_max] = minMaxScaler.fit_transform(df[min_max])
+```
 
 **Model 1 - Polynomial Regression Discussion**
 
