@@ -95,10 +95,11 @@ To understand the importance of the features that we would later take into consi
 *Fig 1: Correlation heatmap generated in milestone 2*                                                            
 *Fig 2: A segment of our pairplot genrated in milestone 2*
 
+<div align="center">
 <img height="450" width="450" alt="Correlation Heatmap" src="https://github.com/user-attachments/assets/50cdfb88-69cd-40ac-94d7-42be71e0b1c7" />
 
 <img height="450" width="450" alt="Correlation Heatmap" src="https://github.com/user-attachments/assets/979525d5-02af-4554-949d-c65fd830b3ee" />
-
+</div>
 
 In regards to feature selection, the main factor we took into consideration when looking for features to retain was their correlation to our target feature ‘close’, which represents the closing price of a certain stock. Correlation analysis would help us identify features with a strong linear relationship to our target variable which is represented with a high absolute correlation indicating that the feature can be a strong predictor to be included in our regression models. To do so, we plotted a correlation heat map for every single feature for a visual representation of the relationships among all features and a corresponding correlation matrix that provides exact correlation values that we used in future reference in processing to determine highly correlated features(red/blue on heatmap or close to values -1 or 1) related to our target that we wanted to keep and identify features with low correlation(white on heatmap or close to value 0). Finally, our pairplots between all features allowed us to analyze all of the metrics above by providing another form of visualization to analyze trends, correlation, and outliers while also providing visual insight on the relationships between different features for both deciding which features will contribute to the accuracy of our model while simultaneously informing us of possible transformations we need to impose onto the data. 
 
@@ -150,7 +151,10 @@ df[min_max] = minMaxScaler.fit_transform(df[min_max])
 In milestone 3, we decided that our first model should be a form of regression. Since linear regression felt like it was too simple to capture the complexity of our dataset and project, we decided to go with polynomial regression of degree 2. After all pre-processing etc, we looped through every ticker/stock in our company, trained and tested the models, and printed the fitting graphs and evaluation metrics for all tickers afterwards. Upon reviewing the metrics, we realized that we had severe overfitting in terms of several magnitudes. For example, when we trained our model on the ASML ticker, our train RMSE was 0.152 and our test RMSE was 4.411. Realizing our issue, we decided on a different approach in Milestone 4 and decided to employ both hyper parameter tuning and regularization to combat the overfitting. For hyper parameter tuning, we used degree 1, 2, 3, 4, and 5 for polynomial regression and used polynomial feature expansion for each degree in order to find the best parameter and observe how the performance of our models changes depending on the degree. After printing and visualizing the performance metrics, we noticed that a clear trend where higher degree parameters exhibited significantly more overfitting. For example, our evaluation results for the ticker ASML gave us a jump from a test RMSE of 0.7 and train RMSE of 2.5 for degree 1 to a train RMSE of 0.2 to 5.8 which was an enormous jump in magnitude for overfitting and continued to increase as the degree increased. We reasoned that this was caused by the fact that using a higher degree allowed the model to become excessively complex and enable it to fit the training data too well which included noise and random fluctuations which was counterintuitive to our initial expectation that a simple linear regression model would be too simple to capture the complexities. In the end, we decided that the best degree would be of degree 1, or linear regression and although it had the best results out of every parameter we tried, it still showed a significant sign of overfitting. Therefore, we decided to pursue more tuning through Lasso and Ridge regularizations for our second models to hopefully reduce overfitting.
 
 *Polynomial regression fit on the stock 'ASML'*
-<img width="550" alt="image" src="https://github.com/user-attachments/assets/f604752b-6655-4fee-860c-04dc06687192" />
+<div align="center">
+<img width="650" alt="image" src="https://github.com/user-attachments/assets/f604752b-6655-4fee-860c-04dc06687192" />
+</div>
+
 
 **Model 2 - Ridge And Lasso Regression L1/L2 Discussion**
 
@@ -161,8 +165,10 @@ The hyperparameter tuning in this step was testing which alpha (regularization s
 However, as we increased the regularization strength, we observed that our RMSE was increasing noticeably for both Train and Test data. This showed us that there is a balance aspect to using Lasso Regression, where we need to find out how much error can we induce in order to reduce overfitting before our model becomes too inaccurate with its prediction capabilities. 
 
 *Lasso and Ridge RMSEs Over Alpha*
-<img width="462" alt="image" src="https://github.com/user-attachments/assets/5b3c11f1-f286-479c-a551-8b70d784265e" />
 
+<div align="center">
+  <img width="462" alt="image" src="https://github.com/user-attachments/assets/5b3c11f1-f286-479c-a551-8b70d784265e" />
+</div>
 
 **Model 3 - Support Vector Regression (SVR) Discussion** 
 
