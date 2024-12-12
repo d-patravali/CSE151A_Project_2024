@@ -31,7 +31,20 @@ Our original dataset contains **7,781 observations** and **1,285 features**, wit
 
 #### Model 1: **Polynomial Regression**
 Our first model was polynomial regression, for which we tested several different polynomial degrees. For polynomial regression, we generated models for several different polynomial degrees, starting with linear regression, and going up until a degree of 5. For each degree, we performed polynomial feature expansion to prepare our data, and generated MSE and R^2 values to evaluate performance and overfitting/underfitting analysis. 
-
+```
+# Store evaluation results
+        model_name = f'Polynomial Degree {degree}'
+        if ticker not in evaluation_results:
+            evaluation_results[ticker] = {}
+        evaluation_results[ticker][model_name] = {
+            "Train RMSE": train_rmse,
+            "Test RMSE": test_rmse,
+            "Train MAE": train_mae,
+            "Test MAE": test_mae,
+            "Train R2": train_r2,
+            "Test R2": test_r2
+        }
+```
 #### Model 2: **Lasso and Ridge Regression**
 Our second model was built upon the fact that we recognized overfitting in our polynomial regression models, for which the best performance came from degree 1 (linear). We used Ridge and Lasso regression as regularized linear regression models to mitigate overfitting in our linear model. For these models, hyperparameter tuning was important to determine which regularization strengths would be most effective in mitigating overfitting without compromising performance. We tested alpha (regularization strength) values of 0.01, 0.08, 0.1, 0.15, 0.2, 0.3, 0.4, 1, 10, and 100 to determine optimal results. 
 
