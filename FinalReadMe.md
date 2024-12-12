@@ -95,9 +95,9 @@ To understand the importance of the features that we would later take into consi
 *Fig 1: Correlation heatmap generated in milestone 2*                                                            
 *Fig 2: A segment of our pairplot genrated in milestone 2*
 
-<img height="350" width="350" alt="Correlation Heatmap" src="https://github.com/user-attachments/assets/50cdfb88-69cd-40ac-94d7-42be71e0b1c7" />
+<img height="450" width="450" alt="Correlation Heatmap" src="https://github.com/user-attachments/assets/50cdfb88-69cd-40ac-94d7-42be71e0b1c7" />
 
-<img height="350" width="350" alt="Correlation Heatmap" src="https://github.com/user-attachments/assets/979525d5-02af-4554-949d-c65fd830b3ee" />
+<img height="450" width="450" alt="Correlation Heatmap" src="https://github.com/user-attachments/assets/979525d5-02af-4554-949d-c65fd830b3ee" />
 
 
 In regards to feature selection, the main factor we took into consideration when looking for features to retain was their correlation to our target feature ‘close’, which represents the closing price of a certain stock. Correlation analysis would help us identify features with a strong linear relationship to our target variable which is represented with a high absolute correlation indicating that the feature can be a strong predictor to be included in our regression models. To do so, we plotted a correlation heat map for every single feature for a visual representation of the relationships among all features and a corresponding correlation matrix that provides exact correlation values that we used in future reference in processing to determine highly correlated features(red/blue on heatmap or close to values -1 or 1) related to our target that we wanted to keep and identify features with low correlation(white on heatmap or close to value 0). Finally, our pairplots between all features allowed us to analyze all of the metrics above by providing another form of visualization to analyze trends, correlation, and outliers while also providing visual insight on the relationships between different features for both deciding which features will contribute to the accuracy of our model while simultaneously informing us of possible transformations we need to impose onto the data. 
