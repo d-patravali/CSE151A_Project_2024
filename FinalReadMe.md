@@ -26,6 +26,21 @@ This project was fascinating because of the overlap of machine learning model de
 #### Data Exploration
 The data exploration phase was conducted in two steps by our group. The first was understanding the structure in which the data was stored. Through printing shapes and unqiues of the data we determined that the dataset tracked various stock indicators from January 3rd 2022 to December 30th for 31 unique stocks. Then the second step was exploring the feature types, identifying features with missing data, and creating pairplot maps to highlight correlation between features.
 
+```
+
+print(df_original.columns)
+print(df_original.shape)
+
+//Output:
+Index(['date', 'open', 'high', 'low', 'close', 'adjclose', 'volume', 'ticker',
+       'RSIadjclose15', 'RSIvolume15',
+       ...
+       'high-15', 'K-15', 'D-15', 'stochastic-k-15', 'stochastic-d-15',
+       'stochastic-kd-15', 'volumenrelativo', 'diff', 'INCREMENTO', 'TARGET'],
+      dtype='object', length=1285)
+(7781, 1285)
+```
+
 #### Preprocessing
 Our original dataset contains **7,781 observations** and **1,285 features**, with empty values and no scaling/standardization. Pre-processing is a crucial step in making our data usable and effective for the models we have built. We first cleaned our dataset by replacing missing values with column medians with a median imputer, and filtering our data for only numerical features. We also scaled those numerical features through standard and min/max scalers. Additionally, it was crucial to decide which of our extensive set of features to use for predictions, so we employed a correlation matrix, and only used features with a correlation value greater than 0.6. Finally, we employed a standard test/train split of 80:20. 
 
