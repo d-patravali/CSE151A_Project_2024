@@ -70,6 +70,7 @@ The third model we built was Support Vector Regression, which uses support vecto
 
 ##  **Results Section**
  DHRUV ADD ONE STOCK GRAPH FOR EACH MODEL IN RESULT, ALWAYS USE ASML 
+ Also the graphs u use in this section remove from hte bottom but leave th other two
 ##  **Discussion Section**
 
 **Data Exploration Discussion**
@@ -192,7 +193,7 @@ Some Exploratory Data Analysis Images:
 ![Screenshot 2024-12-11 at 8 37 14 PM](https://github.com/user-attachments/assets/0d0ceddb-b899-4f0e-b90a-29a0e1a5ac83)
 
 
-
+### *Model Predictions On Two Additional Stocks To Show Model Perforamnce Consistency:*
 Polynomial Regression:
 
 ![Screenshot 2024-12-11 at 8 20 20 PM](https://github.com/user-attachments/assets/b52cb0e6-117b-4e15-917b-8fbe5314e861)
