@@ -33,9 +33,24 @@ This project was fascinating because of the overlap of machine learning model de
 #### Data Exploration
 The data exploration phase was conducted in two steps by our group. The first was understanding the structure in which the data was stored. Through printing shapes and unqiues of the data we determined that the dataset tracked various stock indicators from January 3rd 2022 to December 30th for 31 unique stocks. Then the second step was exploring the feature types, identifying features with missing data, and creating pairplot maps to highlight correlation between features.
 
-*Price over time for 5 select stocks*
+```
+print(df_original.shape)
+print(df_original.columns)
 
-![Screenshot 2024-12-11 at 8 37 14 PM](https://github.com/user-attachments/assets/0d0ceddb-b899-4f0e-b90a-29a0e1a5ac83)
+Output:
+(7781, 1285)
+Index(['date', 'open', 'high', 'low', 'close', 'adjclose', 'volume', 'ticker',
+       'RSIadjclose15', 'RSIvolume15',
+       ...
+       'high-15', 'K-15', 'D-15', 'stochastic-k-15', 'stochastic-d-15',
+       'stochastic-kd-15', 'volumenrelativo', 'diff', 'INCREMENTO', 'TARGET'],
+      dtype='object', length=1285)
+
+```
+
+*Closing Prices of All Stocks*
+![Screenshot 2024-12-11 at 8 37 01 PM](https://github.com/user-attachments/assets/909eaad8-057a-4013-9b6a-7711ba039f77)
+
 
 #### Preprocessing
 Our original dataset contains **7,781 observations** and **1,285 features**, with empty values and no scaling/standardization. Pre-processing is a crucial step in making our data usable and effective for the models we have built. We first cleaned our dataset by replacing missing values with column medians with a median imputer, and filtering our data for only numerical features. We also scaled those numerical features through standard and min/max scalers. Additionally, it was crucial to decide which of our extensive set of features to use for predictions, so we employed a correlation matrix, and only used features with a correlation value greater than 0.6. Finally, we employed a standard test/train split of 80:20. 
@@ -83,31 +98,32 @@ The third model and final model we built was Support Vector Regression, which us
 #### **Model 1: Polynomial Regression**
 For polynomial regression, the main analysis that went into finding our optimal results was figuring out which degree of polynomial yielded the best results for our data. We had clear results, showing that a polynomial degree of 1 (linear) was most optimal for modelling our stock price data. As the polynomial degree went up, we saw a significant increase in overfitting, as train RMSE was driven towards 0, while test RMSE increased. For polynomial degree 1 (linear regression) we saw a train RMSE of 0.2457 and test RMSE of 0.8667. Here we can see that regardless of the fact that the test RMSE is still quite good for our data range for stock prices (in the hundreds of dollars per share), that there is significant overfitting. From the graphs, we can see that the model still closely predicts the ‘close’ price with a high degree of accuracy, but this overfitting issue led us towards our next models, which were chosen to address this concern.
 
+![Screenshot 2024-12-11 at 8 20 20 PM](https://github.com/user-attachments/assets/b52cb0e6-117b-4e15-917b-8fbe5314e861)
+
 
 #### **Model 2: Lasso and Ridge Regression**
 For Lasso and Ridge Regression, we were able to use regularization to address the overfitting concerns with our polynomial degree 1 (linear) regression from our previous model. As stated, we used hyperparameter tuning to test different alpha values (regularization strengths) to find our optimal setting, which yielded the following results. We found that increasing the regularization strength caused a significant tradeoff between error (RMSE) and overfitting. What was more obvious was our optimal Ridge regression. We saw that an changing the regularization strength did not do much for mitigating the overfitting, so by focusing on RMSE, we found an optimal alpha value of 0.08. This showed a train RMSE of 0.157 and a test RMSE of 0.382, which shows extremely accurate predictions for both train and test data. However, while the overfitting is less than linear regression, we can still see it is still too high to consider successful. With Lasso regression, we saw more interesting results, as we got noticeably lower overfitting as we increased regularization strength, down to a percent difference between train and test RMSE of under 50%, which was a significant improvement from Ridge and regular linear regression. However, the regularization strength of 100+ generalized too much, and even though the RMSE was still relatively low at under 2.0, it was much higher than we were able to achieve through other models because it dropped too many weights to 0 and essentially oversimplified. This led us to our next model, which allowed us to model complex relationships, while still regularizing and handling outliers/noise.  
 
+Lasso:
+
+
+![Screenshot 2024-12-11 at 10 23 36 PM](https://github.com/user-attachments/assets/18c52f66-8ac1-4426-ac8f-474dded578c6)
+
+Ridge:
+
+![Screenshot 2024-12-11 at 10 23 46 PM](https://github.com/user-attachments/assets/ad53c138-d3ac-43d0-a203-3ba24b6b5569)
+
 #### **Model 3: Support Vector Regression**
 Support Vector Regression is the model in which we saw the best results. With relatively no overfitting, as well as low RMSE and high R^2 values for both test and train sets, support vector regression was the most successful model in stock market ‘close’ price predictions. The key step for SVR, as stated earlier, was the emphasis on hyperparameter tuning, to ensure that we were using the best parameters for optimal results. We tested 72 hyperparameter combinations, and found that the optimal combination of Kernel, C, Epsilon, and Gamma settings/values were linear, 1.0, 0.01, and scale, respectively. From this combination of hyperparameters, we observed an average train RMSE of 0.206 and an average test RMSE of 0.231, showing a percent difference of only 11%, indicating an extremely low degree of overfitting. The model showed R^2 values of over .95 for both Train and Test data as well, showing that the model fits the data very well. This showed that we had an extremely low RMSE, meaning our model gave incredibly accurate results, while also having almost no overfitting, which was exactly what our project aimed to do. 
+
+![Screenshot 2024-12-11 at 8 22 48 PM](https://github.com/user-attachments/assets/7c8ab550-1fbe-4b45-859b-486908f2f521)
+
 ##  **Discussion Section**
 
 **Data Exploration Discussion**
 The first step in our data exploration was to examine our dataset in order to understand the structure, characteristics, format, and interpret them before we started the preprocessing step. As highlighted in the data exploration section, we first inspected the contents of our dataset through the code snippets provided in the section to find information, descriptions, dataset shape, feature types, and look for missing data. Using this information, we were able to identify the most important features that were essential and peek into the datatypes of each feature to see whether we had to employ encoding or not. These include features covering technical indicators, moving averages, volatility indicators, price range indicators, and other custom metrics. Furthermore, with information about the structure of the dataset, we realized that it had an unnecessary amount of features (1683 observations by 1285 columns) that were about candle patterns. Candle patterns are outside of the scope of our financial knowledge, and via the pairplots seems to have little correlation with the other features. The dataset contained 3 different datatypes: object and float/int64 where one represented the date and the other represented ticker which is the name of the stock company. This enabled us to think about tackling time series and we also noticed our dataset had a significant amount of missing data, both of which would be taken into consideration during preprocessing. 
 
-```
-print(df_original.shape)
-print(df_original.columns)
 
-Output:
-(7781, 1285)
-Index(['date', 'open', 'high', 'low', 'close', 'adjclose', 'volume', 'ticker',
-       'RSIadjclose15', 'RSIvolume15',
-       ...
-       'high-15', 'K-15', 'D-15', 'stochastic-k-15', 'stochastic-d-15',
-       'stochastic-kd-15', 'volumenrelativo', 'diff', 'INCREMENTO', 'TARGET'],
-      dtype='object', length=1285)
-
-```
 
 To understand the importance of the features that we would later take into consideration when filtering, we generated pairplots, histograms, and box plots to visualize our data and their distributions for scaling in preprocessing. Using histograms for every feature, we were able to see their type of distribution, range, skewness, and unusual data patterns which aided us in transforming features that had highly skewed distributions to improve model performance. Box plot visualizations allowed us to see mean, highs, lows, quartiles, and mainly outliers which allowed us to determine which features to scale and normalize in later steps to stabilize model predictions. We originally intended to remove significant or extreme outliers by using box plots but decided against it since those data points still provided significant oversight and information when predicting future prices so we decided to scale/normalize instead to reduce their negative impact on model performance. 
 
@@ -173,10 +189,7 @@ df[min_max] = minMaxScaler.fit_transform(df[min_max])
 
 In milestone 3, we decided that our first model should be a form of regression. Since linear regression felt like it was too simple to capture the complexity of our dataset and project, we decided to go with polynomial regression of degree 2. After all pre-processing etc, we looped through every ticker/stock in our company, trained and tested the models, and printed the fitting graphs and evaluation metrics for all tickers afterwards. Upon reviewing the metrics, we realized that we had severe overfitting in terms of several magnitudes. For example, when we trained our model on the ASML ticker, our train RMSE was 0.152 and our test RMSE was 4.411. Realizing our issue, we decided on a different approach in Milestone 4 and decided to employ both hyper parameter tuning and regularization to combat the overfitting. For hyper parameter tuning, we used degree 1, 2, 3, 4, and 5 for polynomial regression and used polynomial feature expansion for each degree in order to find the best parameter and observe how the performance of our models changes depending on the degree. After printing and visualizing the performance metrics, we noticed that a clear trend where higher degree parameters exhibited significantly more overfitting. For example, our evaluation results for the ticker ASML gave us a jump from a test RMSE of 0.7 and train RMSE of 2.5 for degree 1 to a train RMSE of 0.2 to 5.8 which was an enormous jump in magnitude for overfitting and continued to increase as the degree increased. We reasoned that this was caused by the fact that using a higher degree allowed the model to become excessively complex and enable it to fit the training data too well which included noise and random fluctuations which was counterintuitive to our initial expectation that a simple linear regression model would be too simple to capture the complexities. In the end, we decided that the best degree would be of degree 1, or linear regression and although it had the best results out of every parameter we tried, it still showed a significant sign of overfitting. Therefore, we decided to pursue more tuning through Lasso and Ridge regularizations for our second models to hopefully reduce overfitting.
 
-*Polynomial regression fit on the stock 'ASML'*
-<div align="center">
-<img width="650" alt="image" src="https://github.com/user-attachments/assets/f604752b-6655-4fee-860c-04dc06687192" />
-</div>
+
 
 
 **Model 2 - Ridge And Lasso Regression L1/L2 Discussion**
@@ -189,9 +202,7 @@ However, as we increased the regularization strength, we observed that our RMSE 
 
 *Lasso and Ridge RMSEs Over Alpha*
 
-<div align="center">
-  <img width="462" alt="image" src="https://github.com/user-attachments/assets/5b3c11f1-f286-479c-a551-8b70d784265e" />
-</div>
+
 
 **Model 3 - Support Vector Regression (SVR) Discussion** 
 
