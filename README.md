@@ -53,6 +53,7 @@ Index(['date', 'open', 'high', 'low', 'close', 'adjclose', 'volume', 'ticker',
 
 <div align="center">
 <img height="450" width="450" alt="Correlation Heatmap" src="https://github.com/user-attachments/assets/50cdfb88-69cd-40ac-94d7-42be71e0b1c7" />
+</div>
 
 
 
