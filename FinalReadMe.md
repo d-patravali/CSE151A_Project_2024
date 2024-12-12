@@ -100,3 +100,46 @@ In milestone 3, we decided that our first model should be a form of regression. 
 ##  **Conclusion**
 
 ##  **Statement of Collaboration**
+
+
+Polynomial Regression:
+![Screenshot 2024-12-11 at 8 20 20 PM](https://github.com/user-attachments/assets/b52cb0e6-117b-4e15-917b-8fbe5314e861)
+
+![Screenshot 2024-12-11 at 8 20 32 PM](https://github.com/user-attachments/assets/dfcbb346-3ba6-4243-ab55-d02445eacf6f)
+
+![Screenshot 2024-12-11 at 8 20 45 PM](https://github.com/user-attachments/assets/4fc2ed76-6eb7-4bfb-ad6b-bfcea7ab3085)
+
+
+
+Lasso:
+
+![Screenshot 2024-12-11 at 8 21 15 PM](https://github.com/user-attachments/assets/f97cb37f-6508-4c6a-9bba-37575fe21e3b)
+
+![Screenshot 2024-12-11 at 8 21 34 PM](https://github.com/user-attachments/assets/83b63617-0a17-4ead-bbae-6784ccbe5731)
+
+![Screenshot 2024-12-11 at 8 21 59 PM](https://github.com/user-attachments/assets/88e2eb66-e0af-41ea-95ed-873797b2ffb9)
+
+
+
+Ridge:
+![Screenshot 2024-12-11 at 8 21 24 PM](https://github.com/user-attachments/assets/7fdd039f-850d-42ff-bb75-8d5921744091)
+
+![Screenshot 2024-12-11 at 8 21 45 PM](https://github.com/user-attachments/assets/f04b07ff-00d4-4e00-90c0-1174d94f32d3)
+
+![Screenshot 2024-12-11 at 8 22 16 PM](https://github.com/user-attachments/assets/95583b82-55f0-4b2a-a187-1de556f5a9f1)
+
+
+
+
+
+SVR:
+
+![Screenshot 2024-12-11 at 8 22 48 PM](https://github.com/user-attachments/assets/7c8ab550-1fbe-4b45-859b-486908f2f521)
+
+![Screenshot 2024-12-11 at 8 22 55 PM](https://github.com/user-attachments/assets/09b4314b-00d2-4d01-8e3e-3824cc7c7ede)
+
+![Screenshot 2024-12-11 at 8 23 05 PM](https://github.com/user-attachments/assets/faa86b44-7e4b-4f69-8bf6-6e90c35cb59b)
+
+
+
+
