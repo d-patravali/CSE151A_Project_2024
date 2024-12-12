@@ -35,7 +35,7 @@ The data exploration phase was conducted in two steps by our group. The first wa
 
 *Price over time for 5 select stocks*
 
-<img height="450" alt="SVR Hyper Perameter Sheet" src="https://github.com/user-attachments/assets/253a6534-eee9-44e0-b8a8-2cfbcd11e745" />
+![Screenshot 2024-12-11 at 8 37 14 PM](https://github.com/user-attachments/assets/0d0ceddb-b899-4f0e-b90a-29a0e1a5ac83)
 
 #### Preprocessing
 Our original dataset contains **7,781 observations** and **1,285 features**, with empty values and no scaling/standardization. Pre-processing is a crucial step in making our data usable and effective for the models we have built. We first cleaned our dataset by replacing missing values with column medians with a median imputer, and filtering our data for only numerical features. We also scaled those numerical features through standard and min/max scalers. Additionally, it was crucial to decide which of our extensive set of features to use for predictions, so we employed a correlation matrix, and only used features with a correlation value greater than 0.6. Finally, we employed a standard test/train split of 80:20. 
