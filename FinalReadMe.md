@@ -199,6 +199,10 @@ In regards to future possible directions, we all collectively agreed that the be
 ##  **Statement of Collaboration**
 
 
+
+[Back to Table of Contents](#%EF%B8%8F-table-of-contents)
+
+
 Some Exploratory Data Analysis Images:
 
 ![Screenshot 2024-12-11 at 8 37 01 PM](https://github.com/user-attachments/assets/909eaad8-057a-4013-9b6a-7711ba039f77)
