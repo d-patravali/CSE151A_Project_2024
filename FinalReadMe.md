@@ -43,6 +43,16 @@ Index(['date', 'open', 'high', 'low', 'close', 'adjclose', 'volume', 'ticker',
 
 #### Preprocessing
 Our original dataset contains **7,781 observations** and **1,285 features**, with empty values and no scaling/standardization. Pre-processing is a crucial step in making our data usable and effective for the models we have built. We first cleaned our dataset by replacing missing values with column medians with a median imputer, and filtering our data for only numerical features. We also scaled those numerical features through standard and min/max scalers. Additionally, it was crucial to decide which of our extensive set of features to use for predictions, so we employed a correlation matrix, and only used features with a correlation value greater than 0.6. Finally, we employed a standard test/train split of 80:20. 
+```
+# Select numerical features
+numerical_features = df_original.select_dtypes(include=['float64', 'int64']).columns
+
+# Calculate correlation with 'close' price
+close_correlation = df_original[numerical_features].corr()['close'].drop('close')
+
+# Lower the threshold to include more features (e.g., 0.6 instead of 0.9)
+high_correlation_features = close_correlation[close_correlation.abs() > 0.6]
+```
 
 #### Model 1: **Polynomial Regression**
 Our first model was polynomial regression, for which we tested several different polynomial degrees. For polynomial regression, we generated models for several different polynomial degrees, starting with linear regression, and going up until a degree of 5. For each degree, we performed polynomial feature expansion to prepare our data, and generated MSE and R^2 values to evaluate performance and overfitting/underfitting analysis. 
