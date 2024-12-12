@@ -1,6 +1,6 @@
 # **Stock Price Prediction: Final Milestone** 
 
-![Banner Image](https://as2.ftcdn.net/v2/jpg/04/01/43/81/1000_F_401438164_xZEh1so5FIVpo3fd71xqgEPdu33dyKZm.jpg)  
+![Banner Image]([https://as2.ftcdn.net/v2/jpg/04/01/43/81/1000_F_401438164_xZEh1so5FIVpo3fd71xqgEPdu33dyKZm.jpg](https://img.pikbest.com/wp/202347/stock-market-trend-minimal-trading-graph-flourishing-in-green-3d-render-isolated-on-white-for-data-analysis_9751367.jpg!bw700))  
 *_A journey towards profitable trades._*
 
 ---
