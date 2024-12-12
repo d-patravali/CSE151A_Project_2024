@@ -51,6 +51,11 @@ Index(['date', 'open', 'high', 'low', 'close', 'adjclose', 'volume', 'ticker',
 *Closing Prices of All Stocks*
 ![Screenshot 2024-12-11 at 8 37 01 PM](https://github.com/user-attachments/assets/909eaad8-057a-4013-9b6a-7711ba039f77)
 
+<div align="center">
+<img height="450" width="450" alt="Correlation Heatmap" src="https://github.com/user-attachments/assets/50cdfb88-69cd-40ac-94d7-42be71e0b1c7" />
+
+
+
 
 #### Preprocessing
 Our original dataset contains **7,781 observations** and **1,285 features**, with empty values and no scaling/standardization. Pre-processing is a crucial step in making our data usable and effective for the models we have built. We first cleaned our dataset by replacing missing values with column medians with a median imputer, and filtering our data for only numerical features. We also scaled those numerical features through standard and min/max scalers. Additionally, it was crucial to decide which of our extensive set of features to use for predictions, so we employed a correlation matrix, and only used features with a correlation value greater than 0.6. Finally, we employed a standard test/train split of 80:20. 
@@ -116,7 +121,7 @@ Ridge:
 #### **Model 3: Support Vector Regression**
 Support Vector Regression is the model in which we saw the best results. With relatively no overfitting, as well as low RMSE and high R^2 values for both test and train sets, support vector regression was the most successful model in stock market ‘close’ price predictions. The key step for SVR, as stated earlier, was the emphasis on hyperparameter tuning, to ensure that we were using the best parameters for optimal results. We tested 72 hyperparameter combinations, and found that the optimal combination of Kernel, C, Epsilon, and Gamma settings/values were linear, 1.0, 0.01, and scale, respectively. From this combination of hyperparameters, we observed an average train RMSE of 0.206 and an average test RMSE of 0.231, showing a percent difference of only 11%, indicating an extremely low degree of overfitting. The model showed R^2 values of over .95 for both Train and Test data as well, showing that the model fits the data very well. This showed that we had an extremely low RMSE, meaning our model gave incredibly accurate results, while also having almost no overfitting, which was exactly what our project aimed to do. 
 
-![Screenshot 2024-12-11 at 8 22 48 PM](https://github.com/user-attachments/assets/7c8ab550-1fbe-4b45-859b-486908f2f521)
+![Screenshot 2024-12-11 at 8 23 05 PM](https://github.com/user-attachments/assets/faa86b44-7e4b-4f69-8bf6-6e90c35cb59b)
 
 ##  **Discussion Section**
 
@@ -130,11 +135,6 @@ To understand the importance of the features that we would later take into consi
 *Fig 1: Correlation heatmap generated in milestone 2*                                                            
 *Fig 2: A segment of our pairplot genrated in milestone 2*
 
-<div align="center">
-<img height="450" width="450" alt="Correlation Heatmap" src="https://github.com/user-attachments/assets/50cdfb88-69cd-40ac-94d7-42be71e0b1c7" />
-
-<img height="450" width="450" alt="Correlation Heatmap" src="https://github.com/user-attachments/assets/979525d5-02af-4554-949d-c65fd830b3ee" />
-</div>
 
 In regards to feature selection, the main factor we took into consideration when looking for features to retain was their correlation to our target feature ‘close’, which represents the closing price of a certain stock. Correlation analysis would help us identify features with a strong linear relationship to our target variable which is represented with a high absolute correlation indicating that the feature can be a strong predictor to be included in our regression models. To do so, we plotted a correlation heat map for every single feature for a visual representation of the relationships among all features and a corresponding correlation matrix that provides exact correlation values that we used in future reference in processing to determine highly correlated features(red/blue on heatmap or close to values -1 or 1) related to our target that we wanted to keep and identify features with low correlation(white on heatmap or close to value 0). Finally, our pairplots between all features allowed us to analyze all of the metrics above by providing another form of visualization to analyze trends, correlation, and outliers while also providing visual insight on the relationships between different features for both deciding which features will contribute to the accuracy of our model while simultaneously informing us of possible transformations we need to impose onto the data. 
 
@@ -229,12 +229,11 @@ In regards to future possible directions, we all collectively agreed that the be
 
 Some Exploratory Data Analysis Images:
 
-![Screenshot 2024-12-11 at 8 37 01 PM](https://github.com/user-attachments/assets/909eaad8-057a-4013-9b6a-7711ba039f77)
-
-![Screenshot 2024-12-11 at 8 37 14 PM](https://github.com/user-attachments/assets/0d0ceddb-b899-4f0e-b90a-29a0e1a5ac83)
 
 
-### *Model Predictions On Two Additional Stocks To Show Model Perforamnce Consistency:*
+
+
+### *Extra Snippets*
 Polynomial Regression:
 
 ![Screenshot 2024-12-11 at 8 20 20 PM](https://github.com/user-attachments/assets/b52cb0e6-117b-4e15-917b-8fbe5314e861)
