@@ -224,7 +224,19 @@ In regards to future possible directions, we all collectively agreed that the be
 
 ##  **Statement of Collaboration**
 
+**Derick Jang**
+- Collaborations: Completed all data exploration, preprocessing, building model 1, model 1 hyper parameter tuning, and model 1 visualization figures and evaluation metrics. Also helped with write ups and README discussion section
 
+**Dhruv Patravali **
+- Collaborations: Developed the Lasso/Ridge regression models, and the Support Vector Regression models, and contributed to the write up. 
+
+** Ivor Myers **
+- Collaborations: Focused on data analysis, interpreting data and aiding with hyperparameter tuning, research for which models to try based on previous milestones, optimizing code, and he contributed to the writeup. 
+
+** Cole Carter **
+- Collaborations: Focused on generating the graphs for our all our of preprocessing, and models, which was crucial in understanding our data and our model predictions, and contributed to the writeup.
+
+** All team members contributed equally in one way or another. 
 
 [Back to Table of Contents](#%EF%B8%8F-table-of-contents)
 
@@ -273,21 +285,6 @@ SVR:
 ![Screenshot 2024-12-11 at 8 22 55 PM](https://github.com/user-attachments/assets/09b4314b-00d2-4d01-8e3e-3824cc7c7ede)
 
 ![Screenshot 2024-12-11 at 8 23 05 PM](https://github.com/user-attachments/assets/faa86b44-7e4b-4f69-8bf6-6e90c35cb59b)
-
-## Statement of Collaboration: 
-** Derick Jang **
-- Collaborations: Completed all data exploration, preprocessing, building model 1, model 1 hyper parameter tuning, and model 1 visualization figures and evaluation metrics. Also helped with write ups and README discussion section
-
-** Dhruv Patravali **
-- Collaborations: Developed the Lasso/Ridge regression models, and the Support Vector Regression models, and contributed to the write up. 
-
-** Ivor Myers **
-- Collaborations: Focused on data analysis, interpreting data and aiding with hyperparameter tuning, research for which models to try based on previous milestones, optimizing code, and he contributed to the writeup. 
-
-** Cole Carter **
-- Collaborations: Focused on generating the graphs for our all our of preprocessing, and models, which was crucial in understanding our data and our model predictions, and contributed to the writeup.
-
-** All team members contributed equally in one way or another. 
 
 
 ## Prior Submissions(Write Ups):
