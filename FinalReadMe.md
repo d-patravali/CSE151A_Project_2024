@@ -266,13 +266,13 @@ SVR:
 - Collaborations: Completed all data exploration, preprocessing, building model 1, model 1 hyper parameter tuning, and model 1 visualization figures and evaluation metrics. Also helped with write ups and README discussion section
 
 ** Dhruv Patravali **
-- Collaborations:
+- Collaborations: Developed the Lasso/Ridge regression models, and the Support Vector Regression models, and contributed to the write up. 
 
 ** Ivor Myers **
-- Collaborations:
+- Collaborations: Focused on data analysis, interpreting data and aiding with hyperparameter tuning, research for which models to try based on previous milestones, optimizing code, and he contributed to the writeup. 
 
 ** Cole Carter **
-- Collaborations:
+- Collaborations: Focused on generating the graphs for our all our of preprocessing, and models, which was crucial in understanding our data and our model predictions, and contributed to the writeup.
 
 ** All team members contributed equally in one way or another. 
 
