@@ -156,8 +156,8 @@ Ridge:
 
 #### Model 3: Support Vector Regression
 Here were our results for Poly Regression:
-- Training RMSE: 
-- Test RMSE:
+- Training RMSE: 0.206
+- Test RMSE: 0.231
 - Training R²: 0.9932320517075023
 - Test R²: 0.9808777373054388
 - Cross-Validation R² Scores: [-2.78935438, 0.28107945, 0.84705524, -0.49929551, -0.19701962]
