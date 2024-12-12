@@ -69,7 +69,7 @@ The third model we built was Support Vector Regression, which uses support vecto
 <img height="500" alt="SVR Hyper Perameter Sheet" src="https://github.com/user-attachments/assets/fd529b18-9939-464d-806b-6ee1fff13bda" />
 
 ##  **Results Section**
-
+ DHRUV ADD ONE STOCK GRAPH FOR EACH MODEL IN RESULT 
 ##  **Discussion Section**
 
 **Data Exploration Discussion**
@@ -92,9 +92,12 @@ Index(['date', 'open', 'high', 'low', 'close', 'adjclose', 'volume', 'ticker',
 
 To understand the importance of the features that we would later take into consideration when filtering, we generated pairplots, histograms, and box plots to visualize our data and their distributions for scaling in preprocessing. Using histograms for every feature, we were able to see their type of distribution, range, skewness, and unusual data patterns which aided us in transforming features that had highly skewed distributions to improve model performance. Box plot visualizations allowed us to see mean, highs, lows, quartiles, and mainly outliers which allowed us to determine which features to scale and normalize in later steps to stabilize model predictions. We originally intended to remove significant or extreme outliers by using box plots but decided against it since those data points still provided significant oversight and information when predicting future prices so we decided to scale/normalize instead to reduce their negative impact on model performance. 
 
-*Correlation heatmap generated in milestone 2*                                                            *A segment of our pairplot genrated in milestone 2*
+*Fig 1: Correlation heatmap generated in milestone 2*                                                            
+*Fig 2: A segment of our pairplot genrated in milestone 2*
 
 <img height="350" width="350" alt="Correlation Heatmap" src="https://github.com/user-attachments/assets/50cdfb88-69cd-40ac-94d7-42be71e0b1c7" />
+
+<img height="350" width="350" alt="Correlation Heatmap" src="https://github.com/user-attachments/assets/979525d5-02af-4554-949d-c65fd830b3ee" />
 
 
 In regards to feature selection, the main factor we took into consideration when looking for features to retain was their correlation to our target feature ‘close’, which represents the closing price of a certain stock. Correlation analysis would help us identify features with a strong linear relationship to our target variable which is represented with a high absolute correlation indicating that the feature can be a strong predictor to be included in our regression models. To do so, we plotted a correlation heat map for every single feature for a visual representation of the relationships among all features and a corresponding correlation matrix that provides exact correlation values that we used in future reference in processing to determine highly correlated features(red/blue on heatmap or close to values -1 or 1) related to our target that we wanted to keep and identify features with low correlation(white on heatmap or close to value 0). Finally, our pairplots between all features allowed us to analyze all of the metrics above by providing another form of visualization to analyze trends, correlation, and outliers while also providing visual insight on the relationships between different features for both deciding which features will contribute to the accuracy of our model while simultaneously informing us of possible transformations we need to impose onto the data. 
@@ -163,8 +166,6 @@ In regards to future possible directions, we all collectively agreed that the be
 
 Some Exploratory Data Analysis Images:
 
-![Screenshot 2024-12-11 at 8 36 51 PM](https://github.com/user-attachments/assets/b3518958-109b-48af-a556-9677208ab6dd)
-
 ![Screenshot 2024-12-11 at 8 37 01 PM](https://github.com/user-attachments/assets/909eaad8-057a-4013-9b6a-7711ba039f77)
 
 ![Screenshot 2024-12-11 at 8 37 14 PM](https://github.com/user-attachments/assets/0d0ceddb-b899-4f0e-b90a-29a0e1a5ac83)
@@ -172,6 +173,7 @@ Some Exploratory Data Analysis Images:
 
 
 Polynomial Regression:
+
 ![Screenshot 2024-12-11 at 8 20 20 PM](https://github.com/user-attachments/assets/b52cb0e6-117b-4e15-917b-8fbe5314e861)
 
 ![Screenshot 2024-12-11 at 8 20 32 PM](https://github.com/user-attachments/assets/dfcbb346-3ba6-4243-ab55-d02445eacf6f)
@@ -191,6 +193,7 @@ Lasso:
 
 
 Ridge:
+
 ![Screenshot 2024-12-11 at 8 21 24 PM](https://github.com/user-attachments/assets/7fdd039f-850d-42ff-bb75-8d5921744091)
 
 ![Screenshot 2024-12-11 at 8 21 45 PM](https://github.com/user-attachments/assets/f04b07ff-00d4-4e00-90c0-1174d94f32d3)
