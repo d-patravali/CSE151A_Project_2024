@@ -123,8 +123,12 @@ Train RMSE: 0.7020
   Train Max Error: 2.5795
   Train Median Absolute Error: 0.4306
 
+Here is the graph:
 
-... and here is the graph of our other error metrics... ‼️
+<img width="676" alt="Screenshot 2024-12-11 at 4 58 03 PM" src="https://github.com/user-attachments/assets/55c9a7cf-5b16-48ed-802c-bd46bfca192b" />
+<img width="678" alt="Screenshot 2024-12-11 at 4 58 36 PM" src="https://github.com/user-attachments/assets/73299bb7-1850-421b-ad6c-f483de5099d2" />
+
+
 
 
 #### Model 2: Lasso and Ridge (L1, L2)
@@ -137,7 +141,17 @@ Here were our results for Poly Regression:
 - Mean Cross-Validation R²: -0.4715069631131919
 
 
-... and here is the graph of our other error metrics... ‼️
+Here is the graph:
+
+Lasso:
+<img width="690" alt="Screenshot 2024-12-11 at 4 59 04 PM" src="https://github.com/user-attachments/assets/ef499243-3a3c-4e8f-8fce-e8a50f7b533b" />
+
+Ridge:
+<img width="692" alt="Screenshot 2024-12-11 at 4 59 29 PM" src="https://github.com/user-attachments/assets/b1b529ac-966b-4a45-a841-7051247c6b09" />
+
+
+
+
 
 
 #### Model 3: Support Vector Regression
@@ -150,8 +164,9 @@ Here were our results for Poly Regression:
 - Mean Cross-Validation R²: -0.4715069631131919
 
 
-... and here is the graph of our other error metrics... ‼️
+Here is the graph:
 
+<img width="703" alt="Screenshot 2024-12-11 at 4 59 53 PM" src="https://github.com/user-attachments/assets/28f64825-8ac6-4d23-8293-ee9827370af2" />
 
 
 
